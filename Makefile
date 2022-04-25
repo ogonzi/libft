@@ -6,7 +6,7 @@
 #    By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/25 10:31:35 by ogonzale          #+#    #+#              #
-#    Updated: 2022/04/25 12:41:17 by ogonzale         ###   ########.fr        #
+#    Updated: 2022/04/25 13:05:27 by ogonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM	= /bin/rm -f
 
 NAME	= libft.a
 
-SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c
+SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
 OBJS	= $(SRCS:.c=.o)
 BONUS_S	= ft_islower_bonus.c ft_isupper_bonus.c
 BONUS_O	= $(BONUS_S:.c=.o)

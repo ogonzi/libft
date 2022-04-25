@@ -1,41 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 10:47:05 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/04/25 13:06:00 by ogonzale         ###   ########.fr       */
+/*   Created: 2022/04/25 10:53:27 by ogonzale          #+#    #+#             */
+/*   Updated: 2022/04/25 12:54:30 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-/*
-typedef struct s_list
+int	ft_isascii(int c)
 {
-	void		*content;
-	struct s_list	*next;
-}			t_list;
-*/
-/*
-** Part 1 - Libc functions
-*/
-
-int		ft_isalpha(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isdigit(int c);
-int		ft_isprint(int c);
-/*
-** Extra functions
-*/
-
-int		ft_islower(int c);
-int		ft_isupper(int c);
-
-#endif
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}
