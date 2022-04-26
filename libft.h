@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 10:47:05 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/04/26 09:54:19 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/04/26 17:57:21 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-/*
+
 typedef struct s_list
 {
-	void		*content;
+	void			*content;
 	struct s_list	*next;
-}			t_list;
-*/
+}					t_list;
+
 /*
 ** Part 1 - Libc functions
 */
@@ -53,6 +53,13 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void		*ft_calloc(size_t number, size_t size);
 int			ft_atoi(const char *nptr);
+
+/*
+** Part 2 - Additional functions
+*/ 
+
+char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
 
 /*
 ** Extra functions
