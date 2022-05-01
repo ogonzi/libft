@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 10:47:05 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/04/26 17:57:21 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/01 11:20:58 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,27 @@ int			ft_atoi(const char *nptr);
 
 /*
 ** Part 2 - Additional functions
-*/ 
+*/
 
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
+char		*ft_itoa(int n);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/*
+** Bonus part - Lists
+*/
+
+t_list		*ft_lstnew(void *content);
+void		ft_lstadd_front(t_list **lst, t_list *new);
+int			ft_lstsize(t_list *lst);
+t_list		*ft_lstlast(t_list *lst);
+void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstdelone(t_list *lst, void (*del)(void *));
+void		ft_lstclear(t_list **lst, void (*del)(void *));
+void		ft_lstiter(t_list *lst, void (*f)(void *));
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /*
 ** Extra functions
@@ -69,5 +86,9 @@ int			ft_islower(int c);
 int			ft_isupper(int c);
 int			ft_isspace(int c);
 
+int			ft_is_in_set(int c, char const *set);
+int			ft_numsize(int n);
+
 long double	ft_pow(long double n, unsigned int pow);
+size_t		ft_abs_value(long double n);
 #endif
