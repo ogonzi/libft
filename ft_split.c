@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 11:29:47 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/01 16:52:11 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/09 17:20:05 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,10 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	num_splits = ft_get_num_splits(s, c);
+	if (s[0] == '\0')
+		num_splits = 0;
+	else
+		num_splits = ft_get_num_splits(s, c);
 	str_split = (char **)malloc(sizeof(char *) * (num_splits + 1));
 	if (!str_split)
 		return (0);
@@ -100,8 +103,8 @@ char	**ft_split(char const *s, char c)
 /*
 int	main(void)
 {
-	char const *s = "casa de carlos no es cosa de carros";
-	char		c = 'c';
+	char const *s = "";
+	char		c = 'z';
 	char		**split;
 	int			i;
 
