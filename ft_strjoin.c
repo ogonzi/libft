@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 17:51:58 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/04/26 17:56:53 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/09 18:37:23 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	s = (char *)malloc(ft_strlen(s1) * ft_strlen(s2) * sizeof(char));
+	s = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + sizeof(char) + 1);
 	if (!s)
 		return (0);
 	i = 0;
