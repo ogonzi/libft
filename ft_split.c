@@ -6,12 +6,11 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 11:29:47 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/09 17:20:05 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/10 09:48:16 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_last(char const *s, char c, unsigned int i)
 {
@@ -46,7 +45,7 @@ static unsigned int	ft_get_num_splits(char const *s, char c)
 	return (num_splits);
 }
 
-int	ft_allocate_and_split(char **str_split, char const *s, char c)
+static int	ft_allocate_and_split(char **str_split, char const *s, char c)
 {
 	int	i;
 	int	j;

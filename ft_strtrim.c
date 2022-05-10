@@ -6,14 +6,13 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:25:57 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/09 17:03:46 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/10 09:47:06 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_one_empty_byte(void)
+static char	*ft_one_empty_byte(void)
 {
 	char	*s;
 
