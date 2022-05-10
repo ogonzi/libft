@@ -6,12 +6,11 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:27:38 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/09 17:27:51 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/10 09:39:53 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
@@ -24,10 +23,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		if (((unsigned char *)src)[i] == (unsigned char)c)
-		{
-			printf("Found coinciding char\n");
 			return (dest + i + 1);
-		}
 		i++;
 	}
 	return (0);
