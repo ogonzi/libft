@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 10:47:05 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/10 08:58:07 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/13 09:47:04 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,4 +99,6 @@ long double	ft_pow(long double n, unsigned int pow);
 size_t		ft_abs_value(long double n);
 
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
+
+void		*my_realloc(void *ptr, size_t original_size, size_t new_size);
 #endif
