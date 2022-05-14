@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 09:46:00 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/04/13 11:13:02 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/14 12:02:13 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,8 @@
  * 3. Repeat this process until the quotient becomes less
  * than the base. This quotient is the most significant digit.
  */
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
-int	ft_handle_edge_cases(char *base)
+static int	ft_handle_edge_cases(char *base)
 {	
 	int	i;
 
@@ -42,13 +38,13 @@ int	ft_handle_edge_cases(char *base)
 	return (1);
 }
 
-void	ft_print(int nbr, int i, int neg, char *base)
+static void	ft_print(long int nbr, int i, int neg, char *base)
 {
 	int	j;
-	int	num_arr[32];
+	int	num_arr[64];
 
 	j = -1;
-	while (++j < 32)
+	while (++j < 64)
 	{
 		num_arr[j] = nbr % i;
 		nbr = nbr / i;
@@ -64,12 +60,12 @@ void	ft_print(int nbr, int i, int neg, char *base)
 	{
 		if (num_arr[j] < 0)
 			num_arr[j] = -num_arr[j];
-		ft_putchar(base[num_arr[j]]);
+		ft_putchar_fd(base[num_arr[j]], 1);
 		j--;
 	}
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_base(long int nbr, char *base)
 {
 	int	i;
 	int	j;
