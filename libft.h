@@ -6,7 +6,11 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 10:47:05 by ogonzale          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/05/14 11:02:45 by ogonzale         ###   ########.fr       */
+=======
+/*   Updated: 2022/05/13 11:06:00 by ogonzale         ###   ########.fr       */
+>>>>>>> ed4ca790b706d50aa2bafc7d03a9f1a9a975722d
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +104,8 @@ size_t		ft_abs_value(long double n);
 int			ft_atoi_base(char *str, char *base);
 
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
+
+void		*ft_realloc(void *ptr, size_t original_size, size_t new_size);
+
+char		*ft_strcat(char *dest, char *src);
 #endif

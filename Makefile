@@ -6,7 +6,11 @@
 #    By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/25 10:31:35 by ogonzale          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2022/05/14 11:02:13 by ogonzale         ###   ########.fr        #
+=======
+#    Updated: 2022/05/13 11:03:45 by ogonzale         ###   ########.fr        #
+>>>>>>> ed4ca790b706d50aa2bafc7d03a9f1a9a975722d
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +37,8 @@ OBJS	= $(SRCS:.c=.o)
 
 BONUS_S	= ft_islower_bonus.c ft_isupper_bonus.c ft_isspace_bonus.c ft_pow_bonus.c \
 		  ft_is_in_set_bonus.c ft_numsize_bonus.c ft_abs_value_bonus.c \
-		  ft_memccpy_bonus.c ft_atoi_base_bonus.c
+		  ft_memccpy_bonus.c ft_atoi_base_bonus.c ft_realloc_bonus.c \
+		  ft_strcat_bonus.c
 
 BONUS_O	= $(BONUS_S:.c=.o)
 
