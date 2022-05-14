@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 09:46:00 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/14 16:57:21 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/14 16:59:48 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	ft_putunbr_base(unsigned long int nbr, char *base)
 	}
 	if (nbr == 0)
 	{
-		ft_putchar(base[num_arr[0]], 1);
+		ft_putchar_fd(base[0], 1);
 		return ;
 	}
 	ft_print(nbr, i, base);
