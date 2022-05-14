@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 09:46:00 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/14 13:02:25 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/14 16:01:20 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_handle_edge_cases(char *base)
 	return (1);
 }
 
-static void	ft_print(long long int nbr, int i, int neg, char *base)
+static void	ft_print(unsigned long int nbr, int i, char *base)
 {
 	int	j;
 	int	num_arr[64];
@@ -52,8 +52,6 @@ static void	ft_print(long long int nbr, int i, int neg, char *base)
 	j--;
 	while (num_arr[j] == 0)
 		j--;
-	if (neg == 1)
-		ft_putchar_fd('-', 1);
 	if (j == -2)
 		j = 0;
 	while (j >= 0)
@@ -65,15 +63,11 @@ static void	ft_print(long long int nbr, int i, int neg, char *base)
 	}
 }
 
-void	ft_putnbr_base(long long int nbr, char *base)
+void	ft_putunbr_base(unsigned long int nbr, char *base)
 {
 	int	i;
 	int	j;
-	int	neg;
 
-	neg = 0;
-	if (nbr < 0)
-		neg = 1;
 	if (ft_handle_edge_cases(base) == 0)
 		return ;
 	i = -1;
@@ -86,5 +80,5 @@ void	ft_putnbr_base(long long int nbr, char *base)
 				return ;
 		}
 	}
-	ft_print(nbr, i, neg, base);
+	ft_print(nbr, i, base);
 }
