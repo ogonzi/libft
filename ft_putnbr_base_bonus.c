@@ -6,12 +6,12 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 09:46:00 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/14 12:02:13 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/14 12:04:22 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-
+#include <unistd.h>
+#include "libft.h"
 /*
  * 1. Divide the number by the base to get the remainder 
  * (this will be the least (significant digit of the new
@@ -53,7 +53,7 @@ static void	ft_print(long int nbr, int i, int neg, char *base)
 	while (num_arr[j] == 0)
 		j--;
 	if (neg == 1)
-		ft_putchar('-');
+		ft_putchar_fd('-', 1);
 	if (j == -2)
 		j = 0;
 	while (j >= 0)
