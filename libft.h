@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 11:21:14 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/14 16:08:18 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/14 19:08:40 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ int			ft_numsize(int n);
 
 long double	ft_pow(long double n, unsigned int pow);
 size_t		ft_abs_value(long double n);
-void		ft_putunbr_base(unsigned long int nbr, char *base);
 int			ft_atoi_base(char *str, char *base);
 
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
