@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 09:46:00 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/14 12:04:22 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/14 13:02:25 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_handle_edge_cases(char *base)
 	return (1);
 }
 
-static void	ft_print(long int nbr, int i, int neg, char *base)
+static void	ft_print(long long int nbr, int i, int neg, char *base)
 {
 	int	j;
 	int	num_arr[64];
@@ -65,7 +65,7 @@ static void	ft_print(long int nbr, int i, int neg, char *base)
 	}
 }
 
-void	ft_putnbr_base(long int nbr, char *base)
+void	ft_putnbr_base(long long int nbr, char *base)
 {
 	int	i;
 	int	j;
