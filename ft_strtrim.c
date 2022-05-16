@@ -6,11 +6,20 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:25:57 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/16 18:15:07 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 19:18:58 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * FUNCTION: ft_one_empty_byte()
+ * -----------------------------
+ * PARAMETERS: None.
+ * RETURN: Pointer to allocated memory.
+ * DESCRIPTION: Allocates (with malloc(3)) a memory block of one byte and
+ * initializes it to '\0'.
+ */
 
 static char	*ft_one_empty_byte(void)
 {
