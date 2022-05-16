@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/*
+ * FUNCTION: ft_isupper()
+ * ----------------------
+ * PARAMETERS:
+ *      c: Unsigned char to check
+ * RETURN: The value returned is nonzero (1) if the char c falls into the
+ * tested class, and zero if not.
+ * DESCRIPTION: Checks for an uppercase letter.
+ */
+
 int	ft_isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')

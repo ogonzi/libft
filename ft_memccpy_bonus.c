@@ -6,11 +6,26 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:27:38 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/10 09:39:53 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 11:07:20 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * FUNCTION: ft_memccpy()
+ * ----------------------
+ * PARAMETERS:
+ * 	dest:	Pointer to destination memory area.
+ * 	src:	Pointer to source memory area.
+ * 	c:		Character that limits copy if found.
+ * 	n:		Size in bytes to copy.
+ * RETURN: A pointer to the next character in dest after c, or NULL if c was
+ * not found in the first n characters of src.
+ * DESCRIPTION: The ft_memccpy() function copies no more than n bytes from
+ * memory area src to memory area dest, stopping when the character c is found.
+ * If the memory areas overlap, the results are undefined.
+ */
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

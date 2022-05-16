@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/*
+ * FUNCTION: ft_isalpha()
+ * ----------------------
+ * PARAMETERS:
+ *      c: Unsigned char to check
+ * RETURN: The value returned is nonzero (1) if the char c falls into the
+ * tested class, and zero if not.
+ * DESCRIPTION: Checks fot an alphabetic character.
+ */
+
 int	ft_isalpha(int c)
 {
 	if (ft_islower(c) || ft_isupper(c))

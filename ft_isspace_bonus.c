@@ -12,6 +12,18 @@
 
 #include "libft.h"
 
+/*
+ * FUNCTION: ft_isspace()
+ * ----------------------
+ * PARAMETERS:
+ *      c: Unsigned char to check
+ * RETURN: The value returned is nonzero (1) if the char c falls into the
+ * tested class, and zero if not.
+ * DESCRIPTION: Checks for white-space characters. In the "C" and "POSIX"
+ * locales, these are: space, form-feed ('\f'), newline ('\n'), carriage
+ * return ('\r'), horizontal tab ('\t') and vertical tab ('\v')..
+ */
+
 int	ft_isspace(int c)
 {
 	if ((c >= '\t' && c <= '\r') || c == ' ')

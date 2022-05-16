@@ -6,11 +6,21 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 20:24:09 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/09 16:05:06 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 10:31:28 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * FUNCTION: ft_itoa()
+ * -------------------
+ * PARAMETERS:
+ * 	n: The integer to convert.
+ * RETURN: The string representing the integer. NULL if the allocation fails.
+ * DESCRIPTION: Allocates (with malloc(3)) and returns a string representing
+ * the integer received as an argument. Negative numbers must be handled.
+ */
 
 char	*ft_itoa(int n)
 {

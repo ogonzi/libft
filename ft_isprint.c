@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/*
+ * FUNCTION: ft_isprint()
+ * ----------------------
+ * PARAMETERS:
+ *      c: Unsigned char to check
+ * RETURN: The value returned is nonzero (1) if the char c falls into the
+ * tested class, and zero if not.
+ * DESCRIPTION: Checks for any printable character including space.
+ */
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)

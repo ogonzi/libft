@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/*
+ * FUNCTION: ft_isdigit()
+ * ----------------------
+ * PARAMETERS:
+ *      c: Unsigned char to check
+ * RETURN: The value returned is nonzero (1) if the char c falls into the
+ * tested class, and zero if not.
+ * DESCRIPTION: Checks for a digit (0 through 9).
+ */
+
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

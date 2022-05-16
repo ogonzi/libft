@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/*
+ * FUNCTION: ft_islower()
+ * ----------------------
+ * PARAMETERS:
+ *      c: Unsigned char to check
+ * RETURN: The value returned is nonzero (1) if the char c falls into the
+ * tested class, and zero if not.
+ * DESCRIPTION: Checks for a lowercase character.
+ */
+
 int	ft_islower(int c)
 {
 	if (c >= 'a' && c <= 'z')

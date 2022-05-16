@@ -6,11 +6,30 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 18:33:49 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/11 18:20:18 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 10:58:18 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * FUNCTION: ft_lstmap()
+ * ---------------------
+ * PARAMETERS:
+ * 	lst:	The address of a pointer to a node.
+ * 	f:		The address of the function used to iterate on the list.
+ * 	del:	The address of the function used to delete the content of a node if
+ * 			needed.
+ * RETURN: The new list. NULL if the allocation fails.
+ * DESCRIPTION: Iterates the list 'lst' and applies the function 'f' on the
+ * content of each node. Creates a new list resulting of the successive
+ * applications of the function 'f'. The 'del' function is used to delete the
+ * content of a node if needed.
+ * DEV: A loop through the input lst list is run. For each iteration a node
+ * 'elem' is created (see ft_lstnew()) using the function 'f'. If the elem
+ * allocation fails, the list is cleared and NULL is returned. Else, the elem
+ * node is added to the back of the new list.
+ */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

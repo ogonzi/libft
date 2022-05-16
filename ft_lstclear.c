@@ -6,11 +6,26 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 17:38:24 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/04/29 18:01:04 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 10:44:48 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * FUNCTION: ft_lstclear()
+ * -----------------------
+ * PARAMETERS: 
+ * 	lst: The address of a pointer to a node.
+ * 	del: The address of the function used to delete the content of the node.
+ * RETURN: None.
+ * DESCRIPTION: Deletes and frees the given node and every successor of that
+ * node, using the function 'del' and free(3). Finally, the pointer to the list
+ * must be set to NULL.
+ * DEV: A loop runs through the list lst, and for each iteration a temporal node is
+ * created and set to the next node of the list. Then the current node is 
+ * deleted (see ft_lstdelone()), and lst is reset to tmp.
+ */
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

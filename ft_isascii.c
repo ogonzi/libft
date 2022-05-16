@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/*
+ * FUNCTION: ft_isascii()
+ * ----------------------
+ * PARAMETERS:
+ *      c: Unsigned char to check
+ * RETURN: The value returned is nonzero (1) if the char c falls into the
+ * tested class, and zero if not.
+ * DESCRIPTION: Checks whether c is a 7-bit unsigned char value that fits into
+ * the ASCII character set.
+ */
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
