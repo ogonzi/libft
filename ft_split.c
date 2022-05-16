@@ -6,12 +6,24 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 11:29:47 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/10 09:48:16 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 17:24:59 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * FUNCTION: ft_last()
+ * -------------------
+ * PARAMETERS:
+ * 	s:	The string to check.
+ * 	c:	The delimeter character.
+ * 	i:	The starting position in the string.
+ * RETURN: Nonzero if there are only c and '\0' after position i and zero
+ * otherwise.
+ * DESCRIPTION: The function ft_last() checks if all the characters after
+ * the current position in the string are the delimiter character.
+ */
 static int	ft_last(char const *s, char c, unsigned int i)
 {
 	while (s[i] == c)
@@ -22,6 +34,18 @@ static int	ft_last(char const *s, char c, unsigned int i)
 	}
 	return (0);
 }
+
+/*
+ * FUNCTION: ft_get_num_splits()
+ * -----------------------------
+ * PARAMETERS:
+ * 	s: The string to be split.
+ * 	c: The delimeter character.
+ * RETURN: The number of splits.
+ * DESCRIPTION: The function ft_get_num_splits() counts the number of 
+ * splits by ignoring any delimeter characters at the beggining and the
+ * end and adding 1 to the counter each time it encounters a delimeter.
+ */
 
 static unsigned int	ft_get_num_splits(char const *s, char c)
 {
@@ -44,6 +68,22 @@ static unsigned int	ft_get_num_splits(char const *s, char c)
 	}
 	return (num_splits);
 }
+
+/*
+ * FUNCTION: ft_allocate_and_split()
+ * ---------------------------------
+ * PARAMETERS:
+ * 	str_split: 	The array of strings.
+ * 	s:			The string to be split.
+ * 	c:			The delimeter character.
+ * RETURN: The index of the next to last filled string.
+ * DESCRIPTION: The function ft_allocate_and_split() allocates the necessary
+ * memory for each split, and fills it up accordingly with the appropiate
+ * characters, adding '\0' to the end.
+ * DEV: start_split is used to flag the start position after encountering the
+ * delimeter character. It is useful to allocate memory, and to restart the
+ * loop counter to start_split and fill up the allocated memory.
+ */
 
 static int	ft_allocate_and_split(char **str_split, char const *s, char c)
 {
@@ -73,6 +113,23 @@ static int	ft_allocate_and_split(char **str_split, char const *s, char c)
 	return (j);
 }
 
+/*
+ * FUNCTION: ft_split()
+ * --------------------
+ * PARAMETERS:
+ * 	s:	The string to be split.
+ * 	c:	The delimeter character.
+ * RETURN: The array of new strings resulting from the split. NULL if the
+ * allocation fails.
+ * DESCRIPTION: Allocates (with malloc(3)) and returns an array of strings
+ * obtained by splitting 's' using the character 'c' as a delimeter. The
+ * array must end with a NULL pointer.
+ * DEV: The number of necessary splits must be found using 
+ * ft_get_num_splits() and allocating the result + 1 to account for the NULL
+ * ending. Then, each split is filled using ft_allocate_and_split(), which 
+ * returns the index of the last split, which is finally used to set the last
+ * split to NULL.
+ */
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	num_splits;

@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:25:57 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/10 09:47:06 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:15:07 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,18 @@ static char	*ft_one_empty_byte(void)
 	s[0] = '\0';
 	return (s);
 }
+
+/*
+ * FUNCTION: ft_strtrim()
+ * ----------------------
+ * PARAMETERS:
+ * 	s1:		The string to be trimmed.
+ * 	set:	The reference set of character to trim.
+ * RETURN: The trimmed string. NULL if the allocation fails.
+ * DESCRIPTION: Allocates (with malloc(3)) and returns a copy of 's1'
+ * with the characters specified in 'set' removed from the beginning 
+ * and the end of the string.
+ */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
