@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 10:53:27 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/04/25 13:07:05 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 19:58:50 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  * FUNCTION: ft_isprint()
  * ----------------------
  * PARAMETERS:
- *      c: Unsigned char to check
+ * 	c:	Unsigned char to check
  * RETURN: The value returned is nonzero (1) if the char c falls into the
  * tested class, and zero if not.
  * DESCRIPTION: Checks for any printable character including space.
