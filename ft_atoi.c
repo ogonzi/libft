@@ -6,11 +6,22 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 09:47:30 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/04/26 10:11:58 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 09:41:29 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * Function: ft_atoi
+ * -----------------
+ * Parameters:
+ * 	nptr: String to be converted.
+ * Return: The converted value.
+ * Description: The ft_atoi() function converts the initial portion of the
+ * string pointed to be nptr to int. It trims prefix spaces and allows for one
+ * sign (+ or -) before the number to be converted.
+ */
 
 int	ft_atoi(const char *nptr)
 {

@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 15:14:49 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/14 11:03:35 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/16 09:44:50 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,16 @@ static int	ft_check_and_transform_num(char *str, char *base,
 		res = -res;
 	return (res);
 }
+
+/*
+ * Function: ft_atoi_base
+ * ----------------------
+ * Parameters: 
+ * 	str: The string to be converted.
+ * 	base: The base to which convert. (ex. binary -> base = "01").
+ * Return: The converted number in the appropiate base.
+ * Description: CHECK THIS ONE, IT IS NOT THE SAME AS ATOI.
+ */
 
 int	ft_atoi_base(char *str, char *base)
 {
