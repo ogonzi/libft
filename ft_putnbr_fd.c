@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:03:40 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/17 15:41:04 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/17 17:45:52 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,15 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*num;
+	long	nb;
 
-	num = ft_itoa(n);
-	ft_putstr_fd(num, fd);
-	free(num);
+	nb = n;
+	if (nb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = -nb;
+	}
+	if (nb > 9)
+		ft_putnbr_fd(nb / 10, fd);
+	ft_putchar_fd(nb % 10 + '0', fd);
 }
-/*
-int	main(void)
-{
-	ft_putnbr_fd(-2147483648, 1);
-	return (0);	
-}
-*/
