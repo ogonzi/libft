@@ -6,11 +6,48 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 09:47:30 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/16 19:30:43 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:03:55 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * FUNCTION: ft_pow()
+ * ------------------
+ * PARAMETERS:
+ * 	n:		Base number.
+ *  pow:	Exponent.
+ * RETURN: The value n raised to the power of y.
+ * DESCRIPTION: A simplified version of pow(3). It is applied recursively with
+ * the base case being that any number to the power of 0 is 1.
+ */
+
+static long double	ft_pow(long double n, unsigned int pow)
+{
+	if (pow == 0)
+		return (1);
+	return (n * ft_pow(n, pow - 1));
+}
+
+/*
+ * FUNCTION: ft_isspace()
+ * ----------------------
+ * PARAMETERS:
+ * 	c:	Unsigned char to check
+ * RETURN: The value returned is nonzero (1) if the char c falls into the
+ * tested class, and zero if not.
+ * DESCRIPTION: Checks for white-space characters. In the "C" and "POSIX"
+ * locales, these are: space, form-feed ('\f'), newline ('\n'), carriage
+ * return ('\r'), horizontal tab ('\t') and vertical tab ('\v')..
+ */
+
+static int	ft_isspace(int c)
+{
+	if ((c >= '\t' && c <= '\r') || c == ' ')
+		return (1);
+	return (0);
+}
 
 /*
  * FUNCTION: ft_atoi()

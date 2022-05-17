@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 10:55:20 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/16 19:28:47 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:20:32 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 int	ft_toupper(int c)
 {
-	if (ft_islower(c))
+	if (c >= 'a' && c <= 'z')
 	{
 		c -= 32;
 		return (c);

@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:25:57 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/16 19:18:58 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:50:16 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,30 @@ static char	*ft_one_empty_byte(void)
 		return (0);
 	s[0] = '\0';
 	return (s);
+}
+
+/*
+ * FUNCTION: ft_is_in_set()
+ * ------------------------
+ * PARAMETERS:
+ *  c:      The char to check.
+ *  set:    The string to be checked.
+ * RETURN: Nonzero (1) if found. Zero if not found.
+ * DESCRIPTION: The ft_is_in_set() function checks if c is contained in s.
+ */
+
+static int	ft_is_in_set(int c, char const *set)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
 /*
@@ -63,7 +87,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_is_in_set(s1[i], set) && i >= 0)
 		i--;
 	end = i + 1;
-	s = (char *)malloc((end - start + 1) * sizeof(char));
+	s = malloc((end - start + 1) * sizeof(char));
 	if (!s)
 		return (0);
 	i = start - 1;

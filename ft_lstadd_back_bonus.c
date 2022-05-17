@@ -1,16 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/29 16:46:19 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/16 10:36:36 by ogonzale         ###   ########.fr       */
+/*   Created: 2022/05/17 13:18:34 by ogonzale          #+#    #+#             */
+/*   Updated: 2022/05/17 13:18:52 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
  * FUNCTION: ft_lstadd_back()
