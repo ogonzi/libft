@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 11:29:47 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/16 17:24:59 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/17 10:59:53 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ static int	ft_allocate_and_split(char **str_split, char const *s, char c)
 		start_split = i;
 		while (s[i] != c && s[i] != '\0')
 			i++;
-		str_split[j] = (char *)malloc(sizeof(char) * (i - start_split + 1));
+		str_split[j] = malloc(sizeof(char) * (i - start_split + 1));
 		if (!str_split[j])
 			return (0);
 		i = start_split - 1;
@@ -142,7 +142,7 @@ char	**ft_split(char const *s, char c)
 		num_splits = 0;
 	else
 		num_splits = ft_get_num_splits(s, c);
-	str_split = (char **)malloc(sizeof(char *) * (num_splits + 1));
+	str_split = malloc(sizeof(char *) * (num_splits + 1));
 	if (!str_split)
 		return (0);
 	if (num_splits == 0)
