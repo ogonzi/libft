@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:03:40 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/16 12:23:46 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:41:04 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putstr_fd(num, fd);
 	free(num);
 }
-
 /*
 int	main(void)
 {

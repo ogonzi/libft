@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 11:29:47 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/17 10:59:53 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/17 16:03:28 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,27 @@ static unsigned int	ft_get_num_splits(char const *s, char c)
 }
 
 /*
+ * FUNCTION: ft_free_str_split()
+ * -----------------------------
+ * PARAMETERS:
+ * 	j:			The index of the last malloc.
+ * 	str_split:	The array of strings.
+ * RETURN: Zero.
+ * DESCRIPTION: The function ft_free_str_split() frees the allocated memory.
+ */
+
+static int	ft_free_str_split(int j, char **str_split)
+{
+	while (j >= 0)
+	{
+		free(str_split[j]);
+		j--;
+	}
+	free(str_split);
+	return (0);
+}
+
+/*
  * FUNCTION: ft_allocate_and_split()
  * ---------------------------------
  * PARAMETERS:
@@ -102,7 +123,7 @@ static int	ft_allocate_and_split(char **str_split, char const *s, char c)
 			i++;
 		str_split[j] = malloc(sizeof(char) * (i - start_split + 1));
 		if (!str_split[j])
-			return (0);
+			return (ft_free_str_split(j, str_split));
 		i = start_split - 1;
 		while (s[++i] != c && s[i] != '\0')
 			str_split[j][i - start_split] = s[i];
