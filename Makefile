@@ -6,14 +6,13 @@
 #    By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/14 11:20:27 by ogonzale          #+#    #+#              #
-#    Updated: 2022/05/17 13:06:33 by ogonzale         ###   ########.fr        #
+#    Updated: 2022/05/17 15:13:10 by ogonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC	= gcc
 CFLAGS	= -Wall -Wextra -Werror
 LIB1	= ar -rcs
-LIB2	= ranlib
 RM	= /bin/rm -f
 HEADER = libft.h
 NAME	= libft.a
@@ -39,11 +38,9 @@ all:	$(NAME)
 
 $(NAME):	$(OBJS) $(INCLUDE) $(HEADER)
 		$(LIB1) $(NAME) $(OBJS)
-		$(LIB2) $(NAME)
 
 bonus:		$(NAME) $(BONUS_O) $(HEADER)
 		$(LIB1) $(NAME) $(BONUS_O)
-		$(LIB2) $(NAME)
 		@touch $@
 
 %.o: %.c
