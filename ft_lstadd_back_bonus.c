@@ -6,9 +6,11 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:18:34 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/17 13:18:52 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:29:11 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
  * FUNCTION: ft_lstadd_back()
