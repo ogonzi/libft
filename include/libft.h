@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 11:21:14 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/17 13:04:40 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/05/18 10:28:02 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /*
 ** Extra functions
 */
-/*
 int			ft_islower(int c);
 int			ft_isupper(int c);
 int			ft_isspace(int c);
@@ -104,5 +103,4 @@ void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void		*ft_realloc(void *ptr, size_t original_size, size_t new_size);
 
 char		*ft_strcat(char *dest, char *src);
-*/
 #endif
