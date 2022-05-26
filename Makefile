@@ -6,20 +6,32 @@
 #    By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 10:00:13 by ogonzale          #+#    #+#              #
-#    Updated: 2022/05/18 11:14:03 by ogonzale         ###   ########.fr        #
+#    Updated: 2022/05/26 08:55:18 by ogonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Standard
 
 NAME = libft.a
-INCLUDES = include/
+INCLUDE = inc/
 SRC_DIR = src/
 OBJ_DIR = obj/
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror -I
-RM = /bin/rm -f
+RM = rm -f
 AR = ar -rcs
+
+# Colors
+
+DEF_COLOR = \033[0;39m
+GRAY = \033[0;90m
+RED = \033[0;91m
+GREEN = \033[0;92m
+YELLOW = \033[0;93m
+BLUE = \033[0;94m
+MAGENTA = \033[0;95m
+CYAN = \033[0;96m
+WHITE = \033[0;97m
 
 #Sources
 
@@ -30,9 +42,6 @@ FTIS = ft_is_in_set ft_isalpha ft_isdigit ft_isprint ft_isupper ft_isalnum \
 FTMEM_DIR = ft_mem/
 FTMEM = ft_bzero ft_memccpy ft_memcmp ft_memmove ft_realloc ft_calloc \
 		ft_memchr ft_memcpy ft_memset
-
-FTPUT_DIR = ft_put/
-FTPUT = ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
 
 FTTO_DIR = ft_to/
 FTTO = ft_atoi ft_atoi_base ft_itoa ft_tolower ft_toupper
@@ -51,15 +60,13 @@ FTLST = ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone ft_lstiter \
 
 SRC_FILES+=$(addprefix $(FTIS_DIR), $(FTIS))
 SRC_FILES+=$(addprefix $(FTMEM_DIR), $(FTMEM))
-SRC_FILES+=$(addprefix $(FTPUT_DIR), $(FTPUT))
 SRC_FILES+=$(addprefix $(FTTO_DIR), $(FTTO))
 SRC_FILES+=$(addprefix $(FTSTR_DIR), $(FTSTR))
 SRC_FILES+=$(addprefix $(FTMATH_DIR), $(FTMATH))
-BONUS_FILES+=$(addprefix $(FTLST_DIR), $(FTLST))
+SRC_FILES+=$(addprefix $(FTLST_DIR), $(FTLST))
 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
-BONUS_OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(BONUS_FILES)))
 
 ###
 
@@ -67,35 +74,35 @@ OBJF = .cache_exists
 
 all:	$(NAME)
 
-$(NAME):	$(OBJ)
-	$(AR) $(NAME) $(OBJ)
+$(NAME):	$(OBJ) $(INCLUDE)
+	@$(AR) $(NAME) $(OBJ)
+	@echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCLUDE) | $(OBJF)
+	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
+	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(OBJF):
-	mkdir -p $(OBJ_DIR)
-	mkdir -p $(OBJ_DIR)$(FTIS_DIR)
-	mkdir -p $(OBJ_DIR)$(FTMEM_DIR)
-	mkdir -p $(OBJ_DIR)$(FTPUT_DIR)
-	mkdir -p $(OBJ_DIR)$(FTTO_DIR)
-	mkdir -p $(OBJ_DIR)$(FTSTR_DIR)
-	mkdir -p $(OBJ_DIR)$(FTMATH_DIR)
-	mkdir -p $(OBJ_DIR)$(FTLST_DIR)
-
-bonus:	$(BONUS_OBJ)
-	$(AR) $(NAME) $(BONUS_OBJ)
+	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)$(FTIS_DIR)
+	@mkdir -p $(OBJ_DIR)$(FTMEM_DIR)
+	@mkdir -p $(OBJ_DIR)$(FTPUT_DIR)
+	@mkdir -p $(OBJ_DIR)$(FTTO_DIR)
+	@mkdir -p $(OBJ_DIR)$(FTSTR_DIR)
+	@mkdir -p $(OBJ_DIR)$(FTMATH_DIR)
+	@mkdir -p $(OBJ_DIR)$(FTLST_DIR)
+	@touch $(OBJF)
 
 clean:
-	$(RM) -r $(OBJ_DIR)
-	$(RM) $(OBJF)
+	@$(RM) -r $(OBJ_DIR)
+	@$(RM) $(OBJF)
+	@echo "$(BLUE)Libft object files cleaned.$(DEF_COLOR)"
 
 fclean:	clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "$(CYAN)Libft executable files cleaned.$(DEF_COLOR)"
 
 re:	fclean all
-
-norm:
-	@norminette $(SRC) $(INCLUDES) | grep -v Norme -B1 || true
+	@echo "(GREEN)Cleaned and rebuilt everything for libft.$(DEF_COLOR)"
 
 .PHONY:	all clean fclean re norm
