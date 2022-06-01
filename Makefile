@@ -6,7 +6,7 @@
 #    By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 10:00:13 by ogonzale          #+#    #+#              #
-#    Updated: 2022/05/26 08:55:18 by ogonzale         ###   ########.fr        #
+#    Updated: 2022/06/01 16:55:08 by ogonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,12 +58,16 @@ FTLST_DIR = ft_lst/
 FTLST = ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone ft_lstiter \
 		ft_lstlast ft_lstmap ft_lstnew ft_lstsize
 
+GNL_DIR = gnl/
+GNL = get_next_line get_next_line_utils
+
 SRC_FILES+=$(addprefix $(FTIS_DIR), $(FTIS))
 SRC_FILES+=$(addprefix $(FTMEM_DIR), $(FTMEM))
 SRC_FILES+=$(addprefix $(FTTO_DIR), $(FTTO))
 SRC_FILES+=$(addprefix $(FTSTR_DIR), $(FTSTR))
 SRC_FILES+=$(addprefix $(FTMATH_DIR), $(FTMATH))
 SRC_FILES+=$(addprefix $(FTLST_DIR), $(FTLST))
+SRC_FILES+=$(addprefix $(GNL_DIR), $(GNL))
 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -91,6 +95,7 @@ $(OBJF):
 	@mkdir -p $(OBJ_DIR)$(FTSTR_DIR)
 	@mkdir -p $(OBJ_DIR)$(FTMATH_DIR)
 	@mkdir -p $(OBJ_DIR)$(FTLST_DIR)
+	@mkdir -p $(OBJ_DIR)$(GNL_DIR)
 	@touch $(OBJF)
 
 clean:
