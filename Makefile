@@ -6,7 +6,7 @@
 #    By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 10:00:13 by ogonzale          #+#    #+#              #
-#    Updated: 2022/06/01 16:55:08 by ogonzale         ###   ########.fr        #
+#    Updated: 2022/06/01 19:34:37 by ogonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ INCLUDE = inc/
 SRC_DIR = src/
 OBJ_DIR = obj/
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I
+CFLAGS = -Wall -Wextra -Werror -MMD -I
 RM = rm -f
 AR = ar -rcs
 
@@ -78,11 +78,11 @@ OBJF = .cache_exists
 
 all:	$(NAME)
 
-$(NAME):	$(OBJ) $(INCLUDE)
+$(NAME):	$(OBJ) $(OBJF)
 	@$(AR) $(NAME) $(OBJ)
 	@echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCLUDE) | $(OBJF)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
 	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 

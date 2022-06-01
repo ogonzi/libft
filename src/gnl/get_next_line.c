@@ -6,11 +6,11 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 09:27:02 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/30 10:10:57 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/06/01 18:46:01 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../../inc/get_next_line.h"
 
 /*
  * FUNCTION:	get_next_line

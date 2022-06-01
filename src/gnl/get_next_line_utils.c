@@ -6,11 +6,11 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 09:24:02 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/23 17:51:20 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/06/01 18:46:21 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../../inc/get_next_line.h"
 
 /*
  * FUNCTION: ft_get_size()
