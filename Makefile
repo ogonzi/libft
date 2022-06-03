@@ -6,7 +6,7 @@
 #    By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 10:00:13 by ogonzale          #+#    #+#              #
-#    Updated: 2022/06/01 19:34:37 by ogonzale         ###   ########.fr        #
+#    Updated: 2022/06/03 17:47:50 by ogonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,11 @@
 
 NAME = libft.a
 INCLUDE = inc/
+HEADER = -I$(INCLUDE)
 SRC_DIR = src/
 OBJ_DIR = obj/
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -MMD -I
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 AR = ar -rcs
 
@@ -84,7 +85,7 @@ $(NAME):	$(OBJ) $(OBJF)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
 	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
-	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	@$(CC) -MMD $(CFLAGS) $(HEADER) -c $< -o $@
 
 $(OBJF):
 	@mkdir -p $(OBJ_DIR)
@@ -108,6 +109,8 @@ fclean:	clean
 	@echo "$(CYAN)Libft executable files cleaned.$(DEF_COLOR)"
 
 re:	fclean all
-	@echo "(GREEN)Cleaned and rebuilt everything for libft.$(DEF_COLOR)"
+	@echo "$(GREEN)Cleaned and rebuilt everything for libft.$(DEF_COLOR)"
 
 .PHONY:	all clean fclean re norm
+
+-include $(OBJ:%.o=%.d)
