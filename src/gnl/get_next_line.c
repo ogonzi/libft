@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/get_next_line.h"
+#include "get_next_line.h"
 
 /*
  * FUNCTION:	get_next_line
