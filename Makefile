@@ -6,7 +6,7 @@
 #    By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 10:00:13 by ogonzale          #+#    #+#              #
-#    Updated: 2022/06/03 18:36:24 by ogonzale         ###   ########.fr        #
+#    Updated: 2022/06/03 18:38:39 by ogonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ $(NAME):	$(OBJ)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
 	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
-	@$(CC) -MMD $(CFLAGS) $(HEADER) -c $< -o $@
+	@$(CC) -MT $@ -MMD -MP $(CFLAGS) $(HEADER) -c $< -o $@
 
 $(OBJF):
 	@mkdir -p $(OBJ_DIR)
