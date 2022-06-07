@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 16:55:36 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/05/16 12:24:51 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/06/07 10:09:49 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	if (!s)
-		return ;
-	i = -1;
-	while (s[++i] != '\0')
-		ft_putchar_fd(s[i], fd);
+	if (s)
+		write(fd, s, ft_strlen(s));
 }

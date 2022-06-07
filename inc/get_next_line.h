@@ -6,7 +6,7 @@
 /*   By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 09:27:41 by ogonzale          #+#    #+#             */
-/*   Updated: 2022/06/01 16:57:03 by ogonzale         ###   ########.fr       */
+/*   Updated: 2022/06/07 10:11:47 by ogonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1
+#  define BUFFER_SIZE 1
 # endif
 
 /* get_next_line.c */
