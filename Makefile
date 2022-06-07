@@ -6,7 +6,7 @@
 #    By: ogonzale <ogonzale@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 10:00:13 by ogonzale          #+#    #+#              #
-#    Updated: 2022/06/03 18:51:03 by ogonzale         ###   ########.fr        #
+#    Updated: 2022/06/07 09:52:33 by ogonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,9 @@ FTLST_DIR := ft_lst/
 FTLST := ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone ft_lstiter \
 		ft_lstlast ft_lstmap ft_lstnew ft_lstsize
 
+FTPUT_DIR := ft_put/
+FTPUT := ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
+
 GNL_DIR := gnl/
 GNL := get_next_line get_next_line_utils
 
@@ -71,6 +74,7 @@ SRC_FILES+=$(addprefix $(FTTO_DIR), $(FTTO))
 SRC_FILES+=$(addprefix $(FTSTR_DIR), $(FTSTR))
 SRC_FILES+=$(addprefix $(FTMATH_DIR), $(FTMATH))
 SRC_FILES+=$(addprefix $(FTLST_DIR), $(FTLST))
+SRC_FILES+=$(addprefix $(FTPUT_DIR), $(FTPUT))
 SRC_FILES+=$(addprefix $(GNL_DIR), $(GNL))
 SRC_FILES+=$(addprefix $(PRINTF_DIR), $(PRINTF))
 
